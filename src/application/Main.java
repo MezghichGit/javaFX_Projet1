@@ -24,10 +24,23 @@ public class Main extends Application {
 			//root.getChildren().addAll(btn,msg,btn2); 
 			//root.getChildren().add(btn); // associer à ce gestionnaire le btn
 			
-			HBox root = new HBox();
-			Text titre = new Text("Votre nom : ");
+			Text titre = new Text("Formulaire d'inscription");
+			
+			HBox textNom_textFNom = new HBox();
+			Text nom = new Text("Nom:");
 			TextField txtFNom = new TextField();
-			root.getChildren().addAll(titre,txtFNom);
+			textNom_textFNom.getChildren().addAll(nom,txtFNom);
+
+			HBox textPrenom_textFprenom = new HBox();
+			Text prenom = new Text("Prénom:");
+			TextField txtFPrenom = new TextField();
+			textPrenom_textFprenom.getChildren().addAll(prenom,txtFPrenom);
+			
+			Button btn = new Button("Ajouter");
+			
+			VBox root = new VBox();
+			root.getChildren().addAll(titre,textNom_textFNom,textPrenom_textFprenom,btn);
+			
 			Scene scene = new Scene(root,300,300); // on crée une scène de dim 400 * 400 ayant comme gestionnaire de disposition root
 			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
