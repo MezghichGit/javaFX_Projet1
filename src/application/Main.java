@@ -5,6 +5,7 @@ import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -25,7 +26,7 @@ public class Main extends Application {
 			//root.getChildren().addAll(btn,msg,btn2); 
 			//root.getChildren().add(btn); // associer à ce gestionnaire le btn
 			
-			Text titre = new Text("Formulaire d'inscription");
+			Label titre = new Label("Formulaire d'inscription");
 			
 			HBox textNom_textFNom = new HBox();
 			
@@ -44,7 +45,11 @@ public class Main extends Application {
 			
 			Button btn = new Button("Ajouter");
 			
+			
 			VBox root = new VBox();
+			VBox.setMargin(btn, new Insets(10,0,10,120));
+			VBox.setMargin(titre, new Insets(10,0,10,120));
+			
 			root.getChildren().addAll(titre,textNom_textFNom,textPrenom_textFprenom,btn);
 			
 			Scene scene = new Scene(root,300,300); // on crée une scène de dim 400 * 400 ayant comme gestionnaire de disposition root
