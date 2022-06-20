@@ -1,6 +1,7 @@
 package application;
 	
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -27,13 +28,18 @@ public class Main extends Application {
 			Text titre = new Text("Formulaire d'inscription");
 			
 			HBox textNom_textFNom = new HBox();
+			
 			Text nom = new Text("Nom:");
+			HBox.setMargin(nom, new Insets(10,0,10,10)); 
 			TextField txtFNom = new TextField();
+			HBox.setMargin(txtFNom, new Insets(10,0,10,45)); 
 			textNom_textFNom.getChildren().addAll(nom,txtFNom);
 
 			HBox textPrenom_textFprenom = new HBox();
 			Text prenom = new Text("Prénom:");
+			HBox.setMargin(prenom, new Insets(10,0,10,10)); 
 			TextField txtFPrenom = new TextField();
+			HBox.setMargin(txtFPrenom, new Insets(10,0,10,30)); 
 			textPrenom_textFprenom.getChildren().addAll(prenom,txtFPrenom);
 			
 			Button btn = new Button("Ajouter");
